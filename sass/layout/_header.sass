@@ -1,0 +1,72 @@
+@import header/header-text
+#header
+	background: #4c5b66
+
+.logo
+	display: inline-block
+	margin-top: 27px
+	+transition(0.5s)
+	&:hover
+		+opacity(0.5)
+
+.header-menu
+	position: absolute
+	top: 50px
+	right: 0px
+	z-index: 5
+	+transition(0.5s)
+	+breakpoint($break-767)
+		top: -150px
+		display: block
+		width: 100%
+		text-align: center
+		position: static
+		max-height: 0px
+		overflow: hidden
+
+	li
+		float: left
+		+breakpoint($break-767)
+			float: none
+			
+	a
+		font-family: $hn
+		font-weight: normal
+		padding: 8px 20px
+		+border-radius(25px)
+		color: #fff
+		+transition(0.5s)
+		&:hover
+			+background(linear-gradient(top, #323a41, #46525a))
+			+box-shadow(0px 1px 1px 0px #67737d, #272e33 0 0 6px -5px inset)
+		+breakpoint($break-767)
+			display: inline-block
+		
+
+.header-menu-wrap
+
+	&.open
+		.icon-bars
+			+rotate(90deg)
+			&:before
+				+font-icon("menu-close")
+
+		.header-menu
+			+breakpoint($break-767)
+
+				max-height: 1000px
+				
+.icon-bars
+	&:before 
+		+font-icon("menu")
+	font-size: 20px
+	line-height: 20px
+	height: 20px
+	width: 20px
+	+transition(0.5s)
+	display: none
+	+breakpoint($break-767)
+		display: inline-block
+		position: absolute
+		right: 20px
+		top: 35px

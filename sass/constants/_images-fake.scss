@@ -1,0 +1,47 @@
+@import "icons/*.png";
+// @import "icons2x/*.png";
+
+$icons : sprite-map("icons/*.png");
+// $icons2x : sprite-map("icons2x/*.png");
+
+@mixin icon($sprite, $hover: false){
+ display: block;
+ $width : icons-sprite-width($sprite);
+ width: $width;
+ $height : icons-sprite-height($sprite);
+ height: $height;
+ background: transparent sprite-url($icons) sprite-position($icons, $sprite) no-repeat;
+ }
+ // @if $hover{
+ //  $hover_name : $sprite + "_hover";
+ //  &:hover{
+ //   background-position: sprite-position($icons, $hover_name);
+ //   $width: icons-sprite-width($hover_name);
+ //   $height: icons-sprite-height($hover_name);
+ //   width: $width;
+ //   height: $height;
+ //  }
+ // }
+ // @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+ // only screen and (min--moz-device-pixel-ratio: 1.3),
+ // only screen and (min-resolution: 200dpi) {
+ //  background-image: sprite-url($icons2x);
+ //  @include background-size(ceil(image-width(sprite-path($icons2x)) / 2) auto);
+ //  $pos: sprite-position($icons2x, $sprite);
+ //  $pos-x: nth($pos, 1) / 2;
+ //  $pos-y: nth($pos, 2) / 2;
+ //     background-position: $pos-x $pos-y;
+ //  @if $hover == true {
+ //   $hover_name : $sprite + "_hover";
+ //   &:hover{
+ //    @include background-size(ceil(image-width(sprite-path($icons2x)) / 2) auto);
+ //    $pos: sprite-position($icons2x, $hover_name);
+ //    $pos-x: nth($pos, 1) / 2;
+ //    $pos-y: nth($pos, 2) / 2;
+ //          background-position: $pos-x $pos-y;
+ //          $width: icons-sprite-width($hover_name);
+ //    $height: icons-sprite-height($hover_name);
+ //    width: $width;
+ //    height: $height;
+ //   }
+ //  }

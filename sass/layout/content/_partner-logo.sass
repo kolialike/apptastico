@@ -1,0 +1,26 @@
+.partner-logo
+	background: #ececec
+	border-bottom: 1px solid #c3c3c3
+.partner-logo-item
+	text-align: justify
+	vertical-align: middle
+	+breakpoint($break-479)
+		text-align: center
+	a
+		margin-top: 15px
+		text-align: justify
+		display: inline-block
+		vertical-align: middle
+		+transition(0.5s)
+		&:hover
+			+opacity(0.5)
+		+breakpoint($break-479)
+			display: inline-block
+			margin: 15px 8px 0px
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0
+		
+			

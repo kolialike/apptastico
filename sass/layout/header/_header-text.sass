@@ -1,0 +1,110 @@
+.header-text-iphone
+	background: #4c5b66
+	padding-bottom: 200px
+	position: relative
+	overflow: hidden
+	text-align: center
+	+breakpoint($break-479)
+		padding-bottom: 0
+.header-text
+	text-align: left
+	float: right
+	margin-top: 165px
+	width: 474/1018*100%
+	padding: 20px 20px 20px 10px
+	+breakpoint($break-767)
+		margin-top: 90px
+	+breakpoint($break-479)
+		margin-top: 10px
+		float: none
+		width: 100%
+		box-sizing: border-box
+		padding: 20px
+	h3
+		font-family: $hn
+		font-weight: bold
+		color: #fff
+		font-size: 48px
+		line-height: 40px
+		margin-bottom: 10px
+		+breakpoint($break-767)
+			font-size: 24px
+			line-height: 24px
+	p
+		font-family: $hn
+		font-weight: 300
+		color: #a0a0a0
+		line-height: 24px
+		font-size: 16px
+		+breakpoint($break-767)
+			font-size: 12px
+			line-height: 15px
+	span
+		color: #fff
+	.header-text-item
+		font-family: $hn
+		font-weight: 500
+		font-size: 16px
+		line-height: 24px
+		color: #dcdcdc
+		+breakpoint($break-767)
+			font-size: 14px
+			line-height: 15px
+
+
+.header-iphone
+	position: absolute
+	top: 55px
+	left: 20px	
+	width: 390/1018*100%
+	padding: 20px
+	+breakpoint($break-479)
+		width: auto
+		display: block
+		position: static
+	img 
+		width: 100%
+		+breakpoint($break-479)
+			width: auto
+.request-a-quote
+	font-family: $hn
+	font-weight: bold
+	padding: 15px 35px
+	font-size: 14px
+	color: #fff
+	+background(linear-gradient(top, #439ed5, #378acd))
+	+border-radius(30px)
+	border: 1px solid #216ca0
+	display: inline-block
+	margin-top: 5px
+	margin-right: 10px
+	+box-shadow(0px 14px 37px -7px #333333, #a0cfea 0 0 2px 1px inset)
+	+breakpoint($break-1023)
+		font-size: 13px
+		margin-right: 5px
+	+breakpoint($break-767)
+		padding: 5px 5px
+	&:hover
+		color: #ccc
+		+background(linear-gradient(top, #388bcd, #1f547e))
+
+.recent-work
+	font-family: $hn
+	font-weight: bold
+	color: #fff
+	border-bottom: 1px solid #fff
+	margin-left: 10px
+	+transition(0.5s)
+	+breakpoint($break-1023)
+		margin-left: 5px
+		font-size: 11px
+	+breakpoint($break-767)
+		line-height: 15px
+		display: inline-block
+	&:hover
+		color: #0a3553
+		border-bottom: 1px solid #0a3553
+.icon-tv
+	&:before
+		+font-icon("tv")
+		padding-right: 10px
